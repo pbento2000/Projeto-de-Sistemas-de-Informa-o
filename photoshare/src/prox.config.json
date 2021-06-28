@@ -1,0 +1,7 @@
+{
+    "/users/*": {
+        "target": "http://appserver-01.alunos.di.fc.ul.pt:3077",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

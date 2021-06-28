@@ -1,0 +1,40 @@
+<div id="navbar">
+    <a href="/home" id="titulo">
+        <img src="assets/fonte.png">
+    </a>
+
+    <div class='butoes' *ngIf='loggedIn; else other_content'>
+        <div class='dropdown'>
+            <button (click)='mostraOpcoes()' class="dropbtn">{{user.username}}</button>
+            <div id="myDropdown" class='dropdown-content'>
+                <button routerLink="/profile/{{user.username}}" (click)="irPerfil()">Perfil</button>
+                <button routerLink="/favoritos/{{user.username}}">Favoritos</button>
+                <button (click)="logout()">Logout</button>
+            </div>         
+        </div>
+        <button mat-icon-button class="upload" [disableRipple]="true" routerLink="/upload" ><mat-icon>add_photo_alternate</mat-icon></button>
+        <button mat-icon-button class="upload" [disableRipple]="true" routerLink="/populares" ><mat-icon>whatshot</mat-icon></button>
+        <form (submit)="onSubmit()" class="barraPesquisa" id="barraPesquisa">
+            <input [(ngModel)]="user2" name="first" placeholder="Pesquisar utilizador" id="barra">
+            <mat-icon id="pesquisa" (click)='onSubmit()'>search</mat-icon>
+        </form>
+    </div>
+    <ng-template #other_content>
+        <div class='butoes'>
+            <button id="login" routerLink="/login">Login/Registo</button>
+            <button mat-icon-button class="upload" [disableRipple]="true" routerLink="/populares"><mat-icon>whatshot</mat-icon></button>
+            <form (submit)="onSubmit()" class="barraPesquisa" id="barraPesquisa">
+                <input [(ngModel)]="user2" name="first" placeholder="Pesquisar utilizador" id="barra">
+                <mat-icon id="pesquisa">search</mat-icon>
+            </form>
+        </div>
+    </ng-template>
+    
+</div><br><br><br><br><br>
+<!-- <alert id="alert-1"></alert> -->
+<div *ngIf="loggedIn === false">
+    <br><br>
+    <h3>Quer publicar fotos? Registe-se já sem qualquer custo!</h3>
+    <br><br>
+</div>
+<br>

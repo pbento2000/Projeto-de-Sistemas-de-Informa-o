@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+
+<h2>Detalhes da foto </h2>
+<br><br>
+
+<div *ngIf='photo' id='pagina'>
+   
+    <div class="flex-image">
+        <img [src]=photo.photo>
+    </div>
+    
+    <div id='detalhes'>
+        <h4>Nome da foto:</h4>
+        <p>{{photo.name}}</p>
+        <h4>Descrição da foto:</h4>
+
+        <p *ngIf='photo.description; else withoutDescription' style="max-width: 80%;">{{photo.description}}</p>
+        <ng-template #withoutDescription><p>(Sem Descrição)</p></ng-template>
+        <alert id='alert-2'></alert>
+
+        <button mat-icon-button class="corazon" (click)= 'like()' [disableRipple]="true" *ngIf='userID'>{{totalLikes}}<mat-icon [ngClass]="{'heartfilled': alreadyLiked}">favorite</mat-icon></button>
+        <button mat-icon-button class="corazon" id="disabled" [disableRipple]="true" *ngIf='!userID'>{{totalLikes}}<mat-icon >favorite</mat-icon></button>
+        <button mat-icon-button class="estrela" (click)='favorite()' [disableRipple]="true" *ngIf='userID'><mat-icon [ngClass]="{'starfilled': alreadyFavorited}">star</mat-icon></button>
+        <button mat-flat-button class="partilhar" (click)='share()' [disableRipple]="true"><mat-icon>share</mat-icon></button>
+        <button mat-icon-button class="lixo" *ngIf='userID === photo.owner' (click)= 'open(content)' [disableRipple]="true"><mat-icon>delete</mat-icon></button>
+        <!-- <button id="apagar" (click)=open(content)>Eliminar</button> -->
+        
+    </div>
+
+</div>
+<br><br><br><br><br>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Confirmar Eliminação</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Tem a certeza que quer eliminar a fotografia? Esta operação não pode ser desfeita</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="deletePhoto()">Sim</button>
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close()">Cancelar</button>
+    </div>
+</ng-template>

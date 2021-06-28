@@ -1,0 +1,199 @@
+.upload{
+    display: flex;
+    justify-content: center;
+}
+.uploadMany{
+    background-color: #3460db;
+    color: white;  
+}
+
+.uploadOne:hover{
+    background-color:rgb(199, 215, 246) ;
+}
+
+div.upload > button{
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.box {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+.box div{
+    display: block;
+    height: 90%;
+	width: 95%;
+	font-size:30px;
+	text-align: center;
+	list-style-type: none;
+    margin: 0px 10px 0px 10px ;
+}  
+
+img{
+    object-fit: cover;
+    width: auto;
+    max-width: 95vw;
+    height: 20vh;
+}
+
+ul{
+    justify-content: space-evenly;
+    align-content: stretch;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+}
+li{
+    flex-basis: 10%;
+    margin: 10px 0px 0px 0px ; 
+}
+
+#uploadButton{
+    float: right;
+    margin-top: 2%;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    display: block;
+    background-color: #3460db;
+    color: white;
+}
+
+.oneByOneImage{
+    object-fit: cover;
+    height: 35vh;
+    width: auto;
+    border: 20px solid;
+    border-image-slice: 1;
+    border-width: 3px;
+    border-image-source: linear-gradient(to bottom, #743ad5, #d53a9d);
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 10%;
+}
+
+.flex-image{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.flex-form{
+    margin-left: 2%;
+    width: 50%;
+}
+
+.flex-form > button{
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.flex-form > button.lastUpload{
+    display: block;
+    float: right;
+    background-color: #3460db;
+    color: white;
+}
+
+.flex-form > button.lastUpload[disabled]{
+    background-color: rgba(239, 239, 239, 0.3);
+    color: rgba(16, 16, 16, 0.3);
+}
+
+#escolhe{
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+#centraUpload{
+    margin: auto;
+    padding-bottom: 10%;
+}
+
+#saltar:hover{
+    background-color: #3460db ;
+    color: white;
+}
+
+#addDescricao:hover:enabled{
+    background-color: #3460db ;
+    color: white;
+}
+
+.btn-outline-dark:hover{
+    background-color: #3460db;
+    color: white;
+}
+
+button, input, optgroup, select, textarea {font-size: 20px;}
+
+#btnPasta{
+    opacity: 0%;
+    position: absolute;
+    margin-top: 6%;
+    width: 16%;
+    padding: 10% 25% 5% 25%;
+    z-index: 10;
+}
+
+
+input[type='file'] {
+    color: transparent;   
+    direction: rtl;        
+  }
+  
+#fakenews1{
+    margin-top: 10px;
+    font-size: 3vh;
+    border:0px;
+    border-radius: 5px;
+    background: linear-gradient(to left, #17bce6,#3460db  );
+    /* background: linear-gradient(to bottom, #743ad5 , #d53a9d); */
+    color: white;
+}
+
+
+#fakenews {
+    background-image: linear-gradient(to right, #17bce6 0%, #3460db  51%, #17bce6  100%) ;
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+ }
+
+[type='file']:hover + #fakenews{
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+[type='file']:focus + #fakenews{
+    outline: #000000 solid 2px;
+}
+
+
+ #fakenews:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+

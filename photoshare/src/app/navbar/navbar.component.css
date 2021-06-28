@@ -1,0 +1,190 @@
+#navbar{
+  max-width: 100%;
+  width: 100%;
+  display: flex;  
+  position: fixed;
+  top:0px;
+  background-color: white ;
+  /* border-bottom: 3px solid #3460db; */
+  /*  border-bottom: 3px solid transparent;
+  border-image: 
+  linear-gradient(
+    to bottom, 
+    #406de9, 
+    rgb(118, 171, 233),
+    rgb(238, 167, 198)
+    ) 1 100%; */
+    border-bottom: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to left, #743ad5, #3460db);
+  }
+  
+  #barraPesquisa{
+    display: flex;
+    /* width: 30%;
+    position: relative; */
+    left: 23%;
+    float: right;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #barra{
+    padding-left: 1vw;
+    border:0px;
+    border-bottom: 3px solid #3460db;
+    height: 60%;
+    position: relative;
+    top:15%;
+    width: 24vw;
+  }
+  
+  #pesquisa{
+    margin-left: -10%;
+    font-size: 3vh;
+    position: relative;
+    top:30%;
+  }
+
+  #pesquisa:hover{
+    cursor: pointer;
+  }
+  
+  #titulo{
+    height: 100%;
+  }
+  
+  img{
+    height: 5vmax;
+  }
+  
+  h1{
+    font-size: 3vmax ;
+  }
+  h3{
+    text-align: center;
+  }
+  h1:hover{
+    cursor: pointer;
+  }
+  button{
+    padding: 0vw 3vw 0vw 3vw;
+  }
+  .dropbtn {
+    /* background-color: #3460db; */
+    background-image: linear-gradient(to top,#17bce6, #743ad5 50%, #17bce6 100% );
+    color: white;
+    font-size: 2vh;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    float: right;
+    width: auto;
+    height: 100%;
+    transition: 0.5s;
+    background-size: auto 200%;
+  }
+  
+  .dropbtn:hover, #login:hover {
+    background-position: bottom center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .butoes{
+    float: right;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+  }
+  .dropdown {
+    height: 100%;
+    position: relative;
+    float: right;
+  }
+  
+  #submit{
+    float: right;
+    height: 100%;
+    width: auto;
+    margin: 0px;
+    border: 0px;
+  }
+  
+  #login{
+    background-image: linear-gradient(to top,#17bce6, #743ad5 50%, #17bce6 100% );
+    color: white;
+    font-size: 2vh;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    float: right;
+    width: auto;
+    height: 100%;
+    transition: 0.5s;
+    background-size: auto 200%;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top:100%;
+    background-color: #f1f1f1;
+    min-width: 160%;
+    height: 300%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow:hidden;
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to left, #743ad5, #3460db);
+  }
+  
+  .dropdown-content button {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    display: block;
+    height: 33%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border:0px;
+  }
+  
+  .dropdown-content button:hover {background-color: rgb(201, 215, 247);}
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #292bb9;
+  }
+  
+  #login:hover{background-color: #292bb9;}
+  
+  .show {display: block;}
+  
+  a{
+    color:inherit;
+    text-decoration: none;
+  }
+  
+  .upload{
+    background-color: transparent;
+    float: right;
+    height: 100%;
+    width: auto;
+    margin: 0px;
+    border: 0px;
+    border-radius: 0px;
+  }
+  .upload:focus{outline: none;  }
+  .upload:hover{color: #3460db;  }
+
+
+  @media only screen and (max-width: 1080px) {
+    #barraPesquisa {
+        display: none;
+    }
+}

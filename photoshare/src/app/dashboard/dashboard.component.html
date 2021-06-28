@@ -1,0 +1,27 @@
+<div class='box'>
+    <ul>
+        <span *ngIf="loading" class="loader"></span>
+        <span *ngIf="loading" id="header">A carregar as fotos...</span>
+        <h2 *ngIf="pageType=='perfil' && photos2.length != 0 && !isLoggedUser" style="margin-bottom: 4%; text-align: center;">Fotos de {{user}}</h2>
+        <h2 *ngIf="pageType=='perfil' && photos2.length != 0 && isLoggedUser" style="margin-bottom: 4%; text-align: center;">As Minhas Fotos</h2>
+        <h2 *ngIf="pageType=='perfil' && photos2.length == 0 && !isLoggedUser" style="margin-bottom: 4%; text-align: center;">{{user}} ainda não tem fotos publicadas :(</h2>
+        <h2 *ngIf="pageType=='perfil' && photos2.length == 0 && isLoggedUser" style="margin-bottom: 4%; text-align: center;">Ainda não tens fotos publicadas :(</h2>
+
+        <h2 *ngIf="pageType=='populares'" style="margin-bottom: 4%; text-align: center;">Mais Populares</h2>
+
+        <h2 *ngIf="pageType=='recentes'" style="margin-bottom: 4%; text-align: center;">Mais Recentes</h2>
+
+        <h2 *ngIf="pageType=='favoritos' && photos2.length != 0" style="margin-bottom: 4%; text-align: center;">Os Meus Favoritos</h2>
+        <h2 *ngIf="pageType=='favoritos' && photos2.length == 0" style="margin-bottom: 4%; text-align: center;">Ainda não tens favoritos :(</h2>
+
+
+        <ng-container *ngFor="let foto of photos2">
+            <li>
+                <a href="/photo/{{foto._id}}">
+                    <img [src]=foto.photo>
+                </a>
+            </li>
+        </ng-container>
+    </ul>
+
+</div>

@@ -1,0 +1,13 @@
+
+h2{
+    text-align: center;
+    margin-bottom: 2%;
+}
+.all{
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    width: 100%;
+}

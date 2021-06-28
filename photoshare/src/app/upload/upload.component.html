@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<div>
+    <h2 style="text-align: center;">Submeter Foto</h2>
+    <div style="width: fit-content; margin: 0 auto" class="upload">
+        <button class="uploadOne">Submeter Uma Foto</button>
+        <button routerLink="/uploadMany" class="uploadMany">Submeter Várias Fotos</button>
+    </div>
+</div>
+<br>
+<alert></alert>
+<br>
+<div id="escolhe">
+    <label class="chooseImage" for="chooseFile">
+        <h4>Escolher Imagem: </h4>
+    </label>
+    <ngx-file-drop dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)" 
+        [dropZoneClassName]="'dropZone'" [contentClassName]="'contentZone'" accept='image/*'>
+    <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+        <mat-icon>upload</mat-icon>
+        Arrasta uma foto ou
+        <button type="button" id="dropZone-btn" (click)="openFileSelector()">Escolher imagem</button>
+    </ng-template>
+    </ngx-file-drop>
+</div>
+
+<div class="flex-container">
+    <div *ngIf='photo' class="flex-image">
+        <ng-container>
+            <img [src]="photo.photo">
+        </ng-container>
+    </div>
+    <div *ngIf='photo' class="flex-form">
+        <form [formGroup]="photoDetailsForm" (ngSubmit)="onSubmit()">
+            <label for="name"><h4>Nome</h4></label>
+            <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': f.name.errors }" />
+            <div *ngIf="f.name.errors" class="invalid-feedback">
+                <div *ngIf="f.name.errors.required">Nome da foto necessário</div>
+                <div *ngIf="f.name.errors.maxlength">Nome da foto não pode conter mais que 100 caracteres</div>
+            </div>
+
+            <label for="description" style="margin-top: 2%;"><h4>Descrição</h4></label>
+            <input type="text" formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': f.description.errors }" />
+            <div *ngIf="f.description.errors" class="invalid-feedback">
+                <div *ngIf="f.description.errors.maxlength">Descrição da foto não pode conter mais que 500 caracteres</div>
+            </div>
+            
+            <div class="uploadButton"><button id="uploadButton">Submeter</button></div>
+        </form>
+    </div> 
+</div>

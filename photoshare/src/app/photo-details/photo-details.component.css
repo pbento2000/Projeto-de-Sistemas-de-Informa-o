@@ -1,0 +1,75 @@
+html{width: 100%;}
+
+#pagina{
+    height:100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.starfilled{color:rgb(255, 230, 0);}
+.heartfilled{color:#ff0055;}
+
+img{
+    height: 60vh;
+    width: auto;
+    /* border: #C1D629;
+    border-radius: 20px;
+    border-style: solid; */
+    border: 20px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to bottom, #743ad5, #d53a9d);
+}
+
+#apagar{
+    background-color: rgb(243, 243, 255);
+    margin-top: 5%;
+    font-size: 16px;
+    border: 1px solid rgb(101, 106, 116);
+    cursor: pointer;
+    position: relative;
+    width: auto;
+    height: 100%;
+    border-radius: 4px;
+}
+
+#detalhes{
+    margin-left: 7%;
+    flex-grow: 1;
+}
+
+h2{
+    text-align: center;
+}
+
+.flex-image{
+    margin-left: 2%;
+    margin-right: 2%;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.corazon, .estrela, .lixo, .partilhar{
+    margin: 8% 8% 8% 0%;
+    transform: scale(2);
+    background-color: transparent;
+}
+
+.corazon:hover {color: #ff0081;}    
+.estrela:hover{color: rgb(255, 230, 0);}
+.lixo:hover{color:#3460db;}
+.partilhar:hover{color:#3460db;}
+
+
+.corazon:focus,.estrela:focus, .lixo:focus, .partilhar:focus{
+    outline: none;    
+}
+
+#disabled:hover{
+    color: #212529;
+    cursor: default;
+}
+
+

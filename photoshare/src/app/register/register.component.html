@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<h2>Registar</h2>
+<div class="all">
+    <form id="formulario" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="username"><h4>Nome de Utilizador</h4></label>
+            <input type="text" formControlName="username" class="form-control"
+                [ngClass]="{ 'is-invalid': f.username.errors }" />
+            <div *ngIf="f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">É necessário inserir um nome de utilizador.</div>
+                <div *ngIf="f.username.errors.numb_letters">O nome de utilizador só pode conter números e letras.</div>
+                <div *ngIf="f.username.errors.lowercase_special">O nome de utilizador deve estar em minúsculas.</div>
+                <div *ngIf="f.username.errors.minlength">O nome de utilizador deve conter pelo menos 3 caracteres.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password"><h4>Password</h4></label>
+            <input type="password" formControlName="password" class="form-control"
+                [ngClass]="{ 'is-invalid': f.password.errors }" />
+            <div *ngIf=" f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">É necessário inserir uma password.</div>
+                <div *ngIf="f.password.errors.minlength">A password deve conter pelo menos 8 caracteres.</div>
+                <div *ngIf="f.password.errors.uppercase">A password deve conter pelo menos 1 caracter maiúsculo.</div>
+                <div *ngIf="f.password.errors.lowercase">A password deve conter pelo menos 1 caracter minúsculo.</div>
+                <div *ngIf="f.password.errors.strong">A password deve conter pelo menos 1 algarismo.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Registo
+            </button>
+            <a routerLink="/login" class="btn btn-link">Cancelar</a>
+        </div>
+    </form>
+</div>

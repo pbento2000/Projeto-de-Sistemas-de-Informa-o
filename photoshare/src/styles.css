@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.dropZone {
+    /* border: 20px dashed;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to bottom, #743ad5, #d53a9d); */
+    width: 70%;
+    height: 50%;
+    margin: auto;
+    margin-bottom: 3%;
+    display:inline-block;
+    border-radius:3px;
+    border: 2px dashed #fff;
+    background:
+    linear-gradient(#fff,#fff) padding-box,
+    linear-gradient(to bottom, #743ad5, #3460db, #17bce6) border-box; 
+     box-shadow: 0px 8px 16px 0px rgba(23, 188, 230,0.2);
+    /* linear-gradient(to bottom, #4540f1, #743ad5 , #d53a9d) border-box;  */
+}
+
+.contentZone {
+    height: 35vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.alert-info{
+    text-align: center;
+    width: 90%;
+}
+
+.alert-danger{
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+
+.alert-warning{
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+
+a.close:hover{
+    cursor: pointer;
+}

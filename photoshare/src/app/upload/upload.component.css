@@ -1,0 +1,115 @@
+img{
+    object-fit: cover;
+    height: 35vh;
+    width: auto;
+    border: 20px solid;
+    border-image-slice: 1;
+    border-width: 3px;
+    border-image-source: linear-gradient(to bottom, #743ad5, #d53a9d);
+}
+
+
+#dropZone-btn1{
+    margin-top: 10px;
+    font-size: 3vh;
+    border:0px;
+    border-radius: 5px;
+    background: linear-gradient(to left, #17bce6,#3460db  );
+    /* background: linear-gradient(to bottom, #743ad5 , #d53a9d); */
+    color: white;
+}
+#dropZone-btn {background-image: linear-gradient(to right, #17bce6 0%, #3460db  51%, #17bce6  100%)}
+#dropZone-btn {
+    font-size: 1rem;
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border: 0px;
+ }
+
+ #dropZone-btn:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+ }
+
+.upload{
+    display: flex;
+    justify-content: center;
+}
+
+.uploadOne{
+    background-color: #3460db;
+    color: white;
+}
+
+.uploadMany:hover{
+    background-color:rgb(199, 215, 246) ;
+}
+
+.dropFile{
+    border-style: solid;
+    border-color: #743ad5;
+}
+
+div.upload > button{
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+#uploadButton{
+    margin-top: 7%;
+    float: right;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 20px;
+    display: block;
+    background-color: #3460db;
+    color: white;
+} 
+
+.chooseImage{
+    display: block;
+}
+
+.chooseFile{
+    overflow: hidden;
+    color:transparent;
+    
+}
+
+button, input, optgroup, select, textarea {font-size: 20px;}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-image{
+    margin-left: 2%;
+    margin-right: 2%;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.flex-form{
+    margin-left: 2%;
+    width: 50%;
+    padding-bottom:10%;
+}
+
+#escolhe{
+    text-align: center;
+    margin-bottom: 1%;
+}
